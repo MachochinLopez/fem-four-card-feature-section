@@ -1,0 +1,196 @@
+@charset "UTF-8";
+/**********
+ * Colors *
+ **********/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+/***********
+ * Fuentes *
+ ***********/
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+/*************************
+ * Estilos de tipografía *
+ *************************/
+body {
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: #4c4e61;
+}
+
+/*****************************
+ * Four card feature section *
+ *****************************/
+.fcf-headings {
+  text-align: center;
+}
+.fcf-headings__title--1 {
+  font-weight: 200;
+  font-size: 2.4rem;
+}
+.fcf-headings__title--2 {
+  font-weight: 600;
+  font-size: 2.4rem;
+}
+.fcf-headings__description {
+  font-weight: 400;
+  color: #a3a5ae;
+  font-size: 1.5rem;
+  line-height: 2.4rem;
+}
+
+.fcf-card__title {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.fcf-card__description {
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: #a3a5ae;
+  line-height: 2.2rem;
+}
+
+.attribution {
+  text-align: center;
+}
+
+.fcf-card {
+  background-color: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 0.75rem 1rem 0.25rem rgba(84, 158, 242, 0.15);
+  max-width: 35rem;
+  margin: 0 auto 2.5rem auto;
+  overflow: hidden;
+  padding: 2.75rem;
+  position: relative;
+  /*****************************
+   * Estilos responsivos grid  *
+   *****************************/
+  /*****************
+   * Estilos hijos *
+   *****************/
+  /**********************************
+   * Estilos de la línea de colores *  
+   *  que hay arriba de los cards.  *
+   **********************************/
+}
+@media (min-width: 56.25em) {
+  .fcf-card {
+    margin: 0;
+  }
+  .fcf-card--cyan {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 2;
+    grid-row-end: 4;
+  }
+  .fcf-card--red {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+  .fcf-card--orange {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 5;
+  }
+  .fcf-card--blue {
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 4;
+  }
+}
+.fcf-card__description {
+  margin-top: 0.6rem;
+}
+.fcf-card__image {
+  margin-top: 2.5rem;
+  text-align: right;
+}
+.fcf-card::before {
+  content: "";
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.fcf-card--cyan::before {
+  background-color: #45d3d3;
+}
+.fcf-card--red::before {
+  background-color: #ea5353;
+}
+.fcf-card--orange::before {
+  background-color: #fcaf4a;
+}
+.fcf-card--blue::before {
+  background-color: #549ef2;
+}
+
+.four-card-feature {
+  background-color: #fafafa;
+  padding: 3.25rem;
+  padding-top: 8.5rem;
+}
+
+.fcf-headings {
+  margin-bottom: 8rem;
+}
+.fcf-headings__description {
+  max-width: 50rem;
+  margin: 2rem auto 0 auto;
+}
+
+@media (min-width: 56.25em) {
+  .fcf-cards {
+    display: grid;
+    grid-template-columns: minmax(20rem, 35rem) minmax(20rem, 35rem) minmax(20rem, 35rem);
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    -moz-column-gap: 2.5rem;
+         column-gap: 2.5rem;
+    row-gap: 2.5rem;
+    justify-content: center;
+  }
+}
+
+.attribution {
+  background-color: #fafafa;
+  padding: 2.5rem;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInN0eWxlLmNvbXAuY3NzIiwiLi4vc2Fzcy9hYnN0cmFjdHMvX3ZhcmlhYmxlcy5zY3NzIiwiLi4vc2Fzcy9iYXNlL19iYXNlLnNjc3MiLCIuLi9zYXNzL2Jhc2UvX3R5cG9ncmFwaHkuc2NzcyIsIi4uL3Nhc3MvY29tcG9uZW50cy9fZmNmLWNhcmQuc2NzcyIsIi4uL3Nhc3MvYWJzdHJhY3RzL19taXhpbnMuc2NzcyIsIi4uL3Nhc3MvcGFnZXMvX2hvbWUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxnQkFBZ0I7QUNBaEI7O1dBQUE7QUNBQTs7O0VBR0UsU0FBQTtFQUNBLFVBQUE7RUFFQSxtQkFBQTtBRklGOztBRUFBO0VBQ0UsZ0JBQUE7QUZHRjs7QUVBQTtFQUNFLHNCQUFBO0FGR0Y7O0FHbEJBOztZQUFBO0FBS0E7RUFDRSxzQkFBQTtFQUNBLDhEQUFBO0VBQ0EsZ0JBQUE7RUFDQSxrQkFBQTtBSG1CRjtBR2hCQTtFQUNFLHNCQUFBO0VBQ0EsMkRBQUE7RUFDQSxnQkFBQTtFQUNBLGtCQUFBO0FIa0JGO0FHZkE7RUFDRSxzQkFBQTtFQUNBLDREQUFBO0VBQ0EsZ0JBQUE7RUFDQSxrQkFBQTtBSGlCRjtBR2RBOzswQkFBQTtBQUlBO0VBQ0Usc0JBQUE7RUFDQSxnQkFBQTtFQUNBLGlCQUFBO0VBQ0EsY0Z4QmU7QUR1Q2pCOztBR1pBOzs4QkFBQTtBQUdBO0VBQ0Usa0JBQUE7QUhlRjtBR1pJO0VBQ0UsZ0JBQUE7RUFDQSxpQkFBQTtBSGNOO0FHWkk7RUFDRSxnQkFBQTtFQUNBLGlCQUFBO0FIY047QUdWRTtFQUNFLGdCQUFBO0VBQ0EsY0Y3Q1c7RUU4Q1gsaUJBQUE7RUFDQSxtQkFBQTtBSFlKOztBR1BFO0VBQ0UsZUFBQTtFQUNBLGdCQUFBO0FIVUo7QUdQRTtFQUNFLGlCQUFBO0VBQ0EsZ0JBQUE7RUFDQSxjRjVEVztFRTZEWCxtQkFBQTtBSFNKOztBR0xBO0VBQ0Usa0JBQUE7QUhRRjs7QUlyRkE7RUFDRSx1QkFBQTtFQUNBLHNCQUFBO0VBQ0EsMkRBQUE7RUFFQSxnQkFBQTtFQUNBLDBCQUFBO0VBRUEsZ0JBQUE7RUFDQSxnQkFBQTtFQUNBLGtCQUFBO0VBRUE7O2dDQUFBO0VBb0NBOztvQkFBQTtFQWFBOzs7cUNBQUE7QUo2Q0Y7QUt4R0k7RURGSjtJQWlCSSxTQUFBO0VKNkZGO0VJM0ZFO0lBQ0Usb0JBQUE7SUFDQSxrQkFBQTtJQUNBLGlCQUFBO0lBQ0EsZUFBQTtFSjZGSjtFSTFGRTtJQUNFLG9CQUFBO0lBQ0Esa0JBQUE7SUFDQSxpQkFBQTtJQUNBLGVBQUE7RUo0Rko7RUl6RkU7SUFDRSxvQkFBQTtJQUNBLGtCQUFBO0lBQ0EsaUJBQUE7SUFDQSxlQUFBO0VKMkZKO0VJeEZFO0lBQ0Usb0JBQUE7SUFDQSxrQkFBQTtJQUNBLGlCQUFBO0lBQ0EsZUFBQTtFSjBGSjtBQUNGO0FJbkZFO0VBQ0Usa0JBQUE7QUpxRko7QUlsRkU7RUFDRSxrQkFBQTtFQUNBLGlCQUFBO0FKb0ZKO0FJN0VFO0VBQ0UsV0FBQTtFQUNBLFdBQUE7RUFDQSxXQUFBO0VBRUEsa0JBQUE7RUFDQSxNQUFBO0VBQ0EsT0FBQTtBSjhFSjtBSTNFRTtFQUNFLHlCSHZFRztBRG9KUDtBSTNFRTtFQUNFLHlCSDNFRTtBRHdKTjtBSTNFRTtFQUNFLHlCSDVFSztBRHlKVDtBSTNFRTtFQUNFLHlCSDlFRztBRDJKUDs7QU1sS0E7RUFDRSx5QkxXZ0I7RUtWaEIsZ0JBQUE7RUFDQSxtQkFBQTtBTnFLRjs7QU1sS0E7RUFDRSxtQkFBQTtBTnFLRjtBTW5LRTtFQUNFLGdCQUFBO0VBQ0Esd0JBQUE7QU5xS0o7O0FLOUtJO0VDYUo7SUFFSSxhQUFBO0lBQ0EscUZBQUE7SUFJQSxtQ0FBQTtJQUNBLHVCQUFBO1NBQUEsa0JBQUE7SUFDQSxlQUFBO0lBQ0EsdUJBQUE7RU5pS0Y7QUFDRjs7QU05SkE7RUFDRSx5QkxsQmdCO0VLbUJoQixlQUFBO0FOaUtGIiwiZmlsZSI6InN0eWxlLnByZWZpeC5jc3MifQ== */
