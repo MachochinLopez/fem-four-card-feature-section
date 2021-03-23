@@ -89,10 +89,50 @@ body {
   background-color: white;
   border-radius: 0.75rem;
   box-shadow: 0 0.75rem 1rem 0.25rem rgba(84, 158, 242, 0.15);
-  margin-bottom: 2.5rem;
+  max-width: 35rem;
+  margin: 0 auto 2.5rem auto;
   overflow: hidden;
   padding: 2.75rem;
   position: relative;
+  /*****************************
+   * Estilos responsivos grid  *
+   *****************************/
+  /*****************
+   * Estilos hijos *
+   *****************/
+  /**********************************
+   * Estilos de la línea de colores *  
+   *  que hay arriba de los cards.  *
+   **********************************/
+}
+@media (min-width: 56.25em) {
+  .fcf-card {
+    margin: 0;
+  }
+  .fcf-card--cyan {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 2;
+    grid-row-end: 4;
+  }
+  .fcf-card--red {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+  .fcf-card--orange {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 5;
+  }
+  .fcf-card--blue {
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 4;
+  }
 }
 .fcf-card__description {
   margin-top: 0.6rem;
@@ -132,12 +172,24 @@ body {
   margin-bottom: 8rem;
 }
 .fcf-headings__description {
-  margin-top: 2rem;
+  max-width: 50rem;
+  margin: 2rem auto 0 auto;
+}
+
+@media (min-width: 56.25em) {
+  .fcf-cards {
+    display: grid;
+    grid-template-columns: minmax(20rem, 35rem) minmax(20rem, 35rem) minmax(20rem, 35rem);
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    column-gap: 2.5rem;
+    row-gap: 2.5rem;
+    justify-content: center;
+  }
 }
 
 .attribution {
   background-color: #fafafa;
-  padding: 2.5rem 0;
+  padding: 2.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */

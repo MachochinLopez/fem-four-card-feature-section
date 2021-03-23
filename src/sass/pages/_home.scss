@@ -8,11 +8,26 @@
   margin-bottom: 8rem;
 
   &__description {
-    margin-top: 2rem;
+    max-width: 50rem;
+    margin: 2rem auto 0 auto;
+  }
+}
+
+.fcf-cards {
+  @include for-size(tablet) {
+    display: grid;
+    grid-template-columns: minmax(20rem, 35rem) minmax(20rem, 35rem) minmax(
+        20rem,
+        35rem
+      );
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    column-gap: 2.5rem;
+    row-gap: 2.5rem;
+    justify-content: center;
   }
 }
 
 .attribution {
   background-color: $very-light-gray;
-  padding: 2.5rem 0;
+  padding: 2.5rem;
 }

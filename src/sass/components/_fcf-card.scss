@@ -3,10 +3,52 @@
   border-radius: 0.75rem;
   box-shadow: 0 0.75rem 1rem 0.25rem rgba($blue, 0.15);
 
-  margin-bottom: 2.5rem;
+  max-width: 35rem;
+  margin: 0 auto 2.5rem auto;
+
   overflow: hidden;
   padding: 2.75rem;
   position: relative;
+
+  /*****************************
+   * Estilos responsivos grid  *
+   *****************************/
+
+  @include for-size(tablet) {
+    margin: 0;
+
+    &--cyan {
+      grid-column-start: 1;
+      grid-column-end: 1;
+      grid-row-start: 2;
+      grid-row-end: 4;
+    }
+
+    &--red {
+      grid-column-start: 2;
+      grid-column-end: 2;
+      grid-row-start: 1;
+      grid-row-end: 3;
+    }
+
+    &--orange {
+      grid-column-start: 2;
+      grid-column-end: 2;
+      grid-row-start: 3;
+      grid-row-end: 5;
+    }
+
+    &--blue {
+      grid-column-start: 3;
+      grid-column-end: 3;
+      grid-row-start: 2;
+      grid-row-end: 4;
+    }
+  }
+
+  /*****************
+   * Estilos hijos *
+   *****************/
 
   &__description {
     margin-top: 0.6rem;
@@ -17,7 +59,10 @@
     text-align: right;
   }
 
-  // Estilos de la línea de colores que hay arriba de los cards.
+  /**********************************
+   * Estilos de la línea de colores *  
+   *  que hay arriba de los cards.  *
+   **********************************/
   &::before {
     content: "";
     width: 100%;
