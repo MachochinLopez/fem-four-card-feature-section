@@ -192,4 +192,19 @@ body {
   padding: 2.5rem;
 }
 
+body,
+html {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  background-color: #fafafa;
+}
+
+footer {
+  margin-top: auto;
+}
+
 /*# sourceMappingURL=style.comp.css.map */

@@ -31,3 +31,18 @@
   background-color: $very-light-gray;
   padding: 2.5rem;
 }
+
+body,
+html {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  background-color: $very-light-gray;
+}
+
+footer {
+  margin-top: auto;
+}
