@@ -1,0 +1,43 @@
+.fcf-card {
+  background-color: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 0.75rem 1rem 0.25rem rgba($blue, 0.15);
+
+  margin-bottom: 2.5rem;
+  overflow: hidden;
+  padding: 2.75rem;
+  position: relative;
+
+  &__description {
+    margin-top: 0.6rem;
+  }
+
+  &__image {
+    margin-top: 2.5rem;
+    text-align: right;
+  }
+
+  // Estilos de la línea de colores que hay arriba de los cards.
+  &::before {
+    content: "";
+    width: 100%;
+    height: 4px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &--cyan::before {
+    background-color: $cyan;
+  }
+  &--red::before {
+    background-color: $red;
+  }
+  &--orange::before {
+    background-color: $orange;
+  }
+  &--blue::before {
+    background-color: $blue;
+  }
+}
